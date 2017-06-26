@@ -1,8 +1,8 @@
-function insertionSort(array) {
+function insertionSort(array: number[]): number[] {
   array = array.slice();
 
-  for (let i = 1, l = array.length; i < l; ++i) {
-    const value = array[i];
+  for (let i = 1; i < array.length; ++i) {
+    const value: number = array[i];
     let j = i - 1;
 
     while (j >= 0 && array[j] > value) {
@@ -15,6 +15,6 @@ function insertionSort(array) {
   return array;
 }
 
-const array = [5, 4, 3, 2, 1];
+const array: number[] = [5, 4, 3, 2, 1];
 
 console.log(insertionSort(array));

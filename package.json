@@ -1,0 +1,17 @@
+{
+  "name": "algoritms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:digaev/algorithms.git",
+  "author": "Nikolay Digaev <ffs.cmp@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf ./build && ./node_modules/.bin/tsc",
+    "watch": "./node_modules/.bin/tsc -w"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.2",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4"
+  }
+}
