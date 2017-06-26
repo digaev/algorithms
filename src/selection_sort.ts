@@ -3,7 +3,7 @@ export default function selectionSort(array: number[]): number[] {
 
   for (let i = 0, l = array.length; i < l; ++i) {
     let min: number = array[i];
-    let minIndex: number = -1;
+    let minIndex: number = i;
 
     for (let j = i + 1; j < l; ++j) {
       if (array[j] < min) {
@@ -12,9 +12,7 @@ export default function selectionSort(array: number[]): number[] {
       }
     }
 
-    if (minIndex !== -1) {
-      [array[i], array[minIndex]] = [min, array[i]];
-    }
+    [array[i], array[minIndex]] = [min, array[i]];
   }
 
   return array;
