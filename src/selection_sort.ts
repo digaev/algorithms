@@ -1,7 +1,7 @@
 export default function selectionSort(array: number[]): number[] {
   array = array.slice();
 
-  for (let i = 0, l = array.length; i < l; ++i) {
+  for (let i = 0, l = array.length; i < l - 1; ++i) {
     let min: number = array[i];
     let minIndex: number = i;
 
