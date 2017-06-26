@@ -7,10 +7,32 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./build && ./node_modules/.bin/tsc",
+    "test": "./node_modules/.bin/jest",
     "watch": "./node_modules/.bin/tsc -w"
   },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "coverageReporters": [
+      "html"
+    ]
+  },
   "devDependencies": {
+    "@types/jest": "^20.0.2",
     "@types/node": "^8.0.2",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.6",
     "tslint": "^5.4.3",
     "typescript": "^2.3.4"
   }

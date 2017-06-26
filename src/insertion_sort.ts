@@ -1,4 +1,4 @@
-function insertionSort(array: number[]): number[] {
+export default function insertionSort(array: number[]): number[] {
   array = array.slice();
 
   for (let i = 1; i < array.length; ++i) {
@@ -14,7 +14,3 @@ function insertionSort(array: number[]): number[] {
 
   return array;
 }
-
-const array: number[] = [5, 4, 3, 2, 1];
-
-console.log(insertionSort(array));
