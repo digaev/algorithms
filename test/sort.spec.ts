@@ -4,7 +4,7 @@ import selectionSort from "../src/selection_sort";
 
 import { randomArray } from "./helpers";
 
-const unsorted: number[] = randomArray(1000, 1000);
+const unsorted: number[] = randomArray(100, 100);
 const sorted: number[] = unsorted.slice().sort((a: number, b: number) => a - b);
 
 test("bubbleSort()", () => {
